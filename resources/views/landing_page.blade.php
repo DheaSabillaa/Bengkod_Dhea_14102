@@ -376,6 +376,38 @@
 
     <!-- Stats Section -->
     <section id="stats" class="section-margin">
+        <div class="container py-5">
+    <h2 class="text-center mb-5">Selamat Datang di Sistem Klinik</h2>
+    <div class="row justify-content-center g-4">
+        <!-- Card Login Dokter -->
+        <div class="col-md-3 col-sm-6">
+            <div class="card stats-card h-100">
+                <div class="card-body text-center">
+                    <div class="icon mx-auto">
+                        <i class="fas fa-user-md text-success fa-2x"></i>
+                    </div>
+                    <h5 class="fw-bold mt-3">Login Dokter</h5>
+                    <p class="text-muted">Masuk sebagai dokter untuk memeriksa pasien.</p>
+                    <a href="{{ url('/login?as=dokter') }}" class="btn btn-outline-success btn-sm">Masuk Dokter</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card Login Pasien -->
+        <div class="col-md-3 col-sm-6">
+            <div class="card stats-card h-100">
+                <div class="card-body text-center">
+                    <div class="icon mx-auto" style="background-color: #e6f4ff;">
+                        <i class="fas fa-user-injured text-primary fa-2x"></i>
+                    </div>
+                    <h5 class="fw-bold mt-3">Login Pasien</h5>
+                    <p class="text-muted">Daftarkan diri Anda untuk mendapatkan layanan.</p>
+                   <a href="{{ url('/login?as=pasien') }}" class="btn btn-outline-primary btn-sm">Masuk Pasien</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
         <div class="container">
             <div class="row">
                 <div class="col-md-3 col-sm-6">
@@ -424,7 +456,11 @@
                 </div>
             </div>
         </div>
+
+
     </section>
+
+
 
     <!-- Features Section -->
     <section id="features" class="section-padding bg-light">

@@ -5,10 +5,17 @@ use App\Http\Controllers\MedicalRecordController;
 use App\Http\Controllers\PatientMedicalController;
 use Illuminate\Support\Facades\Route;
 
+
+
 Route::get('/', function () {
     return view('landing_page');
 });
 
+Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
+Route::get('/register', [AuthController::class, 'showRegsiterForm']);
+Route::post('/register', [AuthController::class, 'register']);
+Route::post('/login', [AuthController::class, 'login']);
+Route::post('/logout', [AuthController::class, 'logout']);
 // Route Auth
 Route::get('/register', [AuthController::class, 'showRegsiterForm'])->name('register');
 Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
