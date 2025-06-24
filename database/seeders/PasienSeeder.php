@@ -16,7 +16,7 @@ class PasienSeeder extends Seeder
     {
         $pasiens = [
             [
-                'nama' => 'Kenny Loggins',
+                'nama' => 'Kenny Logginss',
                 'alamat' => 'Jl. Contoh No. 123',
                 'no_hp' => '081234567890',
                 'email' => 'kennyloggins@gmail.com',
