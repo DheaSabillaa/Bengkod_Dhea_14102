@@ -221,6 +221,22 @@
                             <input type="tel" class="form-control border-start-0" id="no_hp" name="no_hp" placeholder="Contoh: 08123456789" required>
                         </div>
                     </div>
+                    <div class="mb-3">
+                    <label for="no_ktp" class="form-label">Nomor KTP</label>
+                    <div class="input-group">
+                        <span class="input-group-text bg-light border-end-0">
+                            <i class="fas fa-id-card text-muted"></i>
+                        </span>
+                        <input type="text" class="form-control border-start-0" id="no_ktp" name="no_ktp" placeholder="Masukkan No. KTP" required maxlength="16">
+                    </div>
+                </div>
+
+                    <div class="mb-3">
+                        <label for="role" class="form-label">Daftar sebagai</label>
+                        <select  type="hidden" name="role" id="role" class="form-control" required>
+                            <option value="pasien">Pasien</option>
+                        </select>
+                    </div>
 
                     <div class="mb-3">
                         <label for="email" class="form-label">Email</label>
@@ -258,6 +274,32 @@
                 </form>
             </div>
         </div>
+
+        @if (session('success'))
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        {{ session('success') }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+@endif
+
+@if (session('error'))
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        {{ session('error') }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+@endif
+
+@if ($errors->any())
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <strong>Terjadi kesalahan:</strong>
+        <ul class="mb-0">
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+@endif
 
         <a href="/" class="back-to-home">
             <i class="fas fa-arrow-left"></i> Kembali ke Beranda

@@ -11,13 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('obats', function (Blueprint $table) {
-            $table->id();
-            $table->string('nama_obat');
-            $table->string('kemasan');
-            $table->integer('harga');
-            $table->timestamps();
+         Schema::create('polis', function (Blueprint $table) {
+            $table->id(); // Primary Key (id)
+            $table->string('nama_poli'); // Nama Poli
+            $table->text('keterangan')->nullable(); // Keterangan Poli, nullable if not provided
+            $table->timestamps(); // created_at & updated_at
         });
+
     }
 
     /**
@@ -25,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('obats');
+        //
     }
 };

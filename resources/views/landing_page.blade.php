@@ -388,7 +388,7 @@
                     </div>
                     <h5 class="fw-bold mt-3">Login Dokter</h5>
                     <p class="text-muted">Masuk sebagai dokter untuk memeriksa pasien.</p>
-                    <a href="{{ url('/login?as=dokter') }}" class="btn btn-outline-success btn-sm">Masuk Dokter</a>
+                    <a href="{{ url('/login') }}" class="btn btn-outline-success btn-sm">Masuk Dokter</a>
                 </div>
             </div>
         </div>
@@ -402,7 +402,7 @@
                     </div>
                     <h5 class="fw-bold mt-3">Login Pasien</h5>
                     <p class="text-muted">Daftarkan diri Anda untuk mendapatkan layanan.</p>
-                   <a href="{{ url('/login?as=pasien') }}" class="btn btn-outline-primary btn-sm">Masuk Pasien</a>
+                   <a href="{{ url('/login') }}" class="btn btn-outline-primary btn-sm">Masuk Pasien</a>
                 </div>
             </div>
         </div>
